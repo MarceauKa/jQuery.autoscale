@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>jquery.autoscale</title>
+	<meta charset="utf-8"/>
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+	<style type="text/css">
+	* {
+		box-sizing: border-box;
+	}
+	.wrapper {
+		background-color: black;
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		overflow: hidden;
+	}
+
+	.element {
+		position: relative;
+		width: 1278px;
+		height: 720px;
+		top: 50%;
+		left: 50%;
+		background: #a90329;
+		background: -moz-linear-gradient(-45deg, #a90329 0%, #8f0222 44%, #6d0019 100%);
+		background: -webkit-linear-gradient(-45deg, #a90329 0%,#8f0222 44%,#6d0019 100%);
+		background: linear-gradient(135deg, #a90329 0%,#8f0222 44%,#6d0019 100%);
+		transform: scale(1);
+		transition: transform .2s linear;
+	}
+
+	h2 {
+		position: absolute;
+		display: inline;
+		font-family: "Comic Sans", "Comic Sans MS", cursive;
+		text-align: center;
+		font-family: 20px;
+		padding: 5px;
+		margin: 0;
+		text-shadow: 2px 2px 4px rgba(0, 0, 0, .6);
+	}
+
+	.title1 { color: yellow; top: 25px; left: 140px; }
+	.title2 { color: cyan; top: 137px; left: 389px; font-size: 36px; }
+	.title3 { color: orange; top: 537px; left: 248px; font-size: 56px; }
+	.title4 { color: green; top: 612px; left: 771px; font-size: 42px; }
+
+	.delay1 { animation-delay: 200ms; animation-iteration-count: infinite; }
+	.delay2 { animation-delay: 800ms; animation-iteration-count: infinite; }
+	.delay3 { animation-delay: 1200ms; animation-iteration-count: infinite; }
+	.delay4 { animation-delay: 1800ms; animation-iteration-count: infinite; }
+	</style>
+</head>
+<body>
+	
+	<div class="wrapper">
+		<div class="element">
+			<h2 class="animated bounce title1 delay1">Wow</h2>
+			<h2 class="animated zoomIn title2 delay2">Much cool</h2>
+			<h2 class="animated wobble title3 delay3">Awesome</h2>
+			<h2 class="animated tada title4 delay4">Doge</h2>
+		</div>
+	</div>
+
+	<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+	<script src="../jquery.autoscale.min.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			$('.wrapper .element').autoscale();
+		});
+	</script>
+
+</body>
+</html>
